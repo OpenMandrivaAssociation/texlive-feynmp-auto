@@ -6,7 +6,7 @@
 # catalog-version 1.1
 Name:		texlive-feynmp-auto
 Version:	1.1
-Release:	3
+Release:	4
 Summary:	Automatic processing of feynmp graphics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/feynmp-auto
