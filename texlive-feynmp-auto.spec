@@ -1,19 +1,13 @@
-# revision 30223
-# category Package
-# catalog-ctan /macros/latex/contrib/feynmp-auto
-# catalog-date 2013-05-03 17:23:09 +0200
-# catalog-license lppl1.3
-# catalog-version 1.1
 Name:		texlive-feynmp-auto
-Version:	1.1
-Release:	10
+Version:	30223
+Release:	1
 Summary:	Automatic processing of feynmp graphics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/feynmp-auto
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/feynmp-auto.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/feynmp-auto.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/feynmp-auto.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/feynmp-auto.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/feynmp-auto.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/feynmp-auto.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ will be available in the next run of LaTeX. The package honours
 options that apply to feynmp.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,7 +38,8 @@ options that apply to feynmp.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
