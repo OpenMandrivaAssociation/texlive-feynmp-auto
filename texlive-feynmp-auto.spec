@@ -3,7 +3,7 @@ Version:	30223
 Release:	2
 Summary:	Automatic processing of feynmp graphics
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/feynmp-auto
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/feynmp-auto
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/feynmp-auto.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/feynmp-auto.doc.r%{version}.tar.xz
